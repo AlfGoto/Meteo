@@ -1,0 +1,140 @@
+:root {
+    --neutre1: rgb(46, 46, 46);
+    --neutre2: rgb(83, 83, 83);
+    --neutre3: rgb(137, 137, 137);
+
+    --backgroundTransparent: rgba(235, 235, 235, 0.257);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100svh;
+    width: 100svw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#fond {
+    position: absolute;
+    background-size: cover;
+    height: 100svh;
+    width: 100svw;
+    z-index: -1;
+}
+
+
+
+
+
+
+#site {
+    height: 85%;
+    width: 40vw;
+    margin-top: 10vh;
+    padding: 2vh;
+
+    border-radius: 5vh;
+    border: var(--neutre2) 0.25vw solid;
+    background-color: var(--backgroundTransparent);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        margin: 2vh;
+        font-size: 7vh;
+    }
+
+    #temps {
+        display: flex;
+        height: 20%;
+        gap: 1vw;
+        margin-bottom: 2vw;
+
+        div {
+            height: 100%;
+            width: 18vw;
+            border: var(--neutre2) 0.1vw solid;
+
+            font-size: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    .forecastCONTENT{
+        border: var(--neutre2) 0.1vw solid;
+        width: 37vw;
+        height: 5vh;
+
+        display: flex;
+        align-items: center;
+
+        padding-left: 1vw;
+    }
+}
+
+
+
+
+
+
+#menuDIV {
+    position: absolute;
+    left: -27vw;
+    height: 100svh;
+    width: 30vw;
+    transition: left ease 0.5s;
+
+    display: flex;
+
+    #menuGRAB {
+        background-color: var(--neutre2);
+        height: 100%;
+        width: 10%;
+    }
+    #menuCONTENT {
+        background-color: var(--neutre3);
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10vh;
+        align-items: center;
+
+        input {
+            height: 4vh;
+            width: 10vw;
+            text-align: center;
+            border-radius: 1vh;
+        }
+
+        #researchResult {
+            div {
+                background-color: aqua;
+                border-radius: 1vh;
+                margin: 0.5vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 4vh;
+                width: 10vw;
+
+                p {
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
